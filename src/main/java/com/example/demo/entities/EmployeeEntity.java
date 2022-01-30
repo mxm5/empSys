@@ -10,7 +10,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
+@AllArgsConstructor
 @Table(name = "employee_entity")
 public class EmployeeEntity {
     @Id
@@ -26,6 +26,9 @@ public class EmployeeEntity {
 
     @Column(name = "email", nullable = false)
     private String email;
+
+    public EmployeeEntity() {
+    }
 
     @Override
     public boolean equals(Object o) {
